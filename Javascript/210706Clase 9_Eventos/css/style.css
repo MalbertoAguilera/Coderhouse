@@ -1,0 +1,167 @@
+@import url("https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+/* apply a natural box layout model to all elements, but allowing components to change */
+html {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background-color: #003049;
+  font-size: 1.6rem;
+  line-height: 1.5rem;
+  font-family: "Raleway", sans-serif;
+}
+
+body .container {
+  width: 80%;
+  margin: auto;
+}
+
+ul {
+  list-style: none;
+}
+
+table {
+  background-color: white;
+  width: 100%;
+}
+
+table caption {
+  text-align: left;
+  color: silver;
+  font-weight: bold;
+  text-transform: uppercase;
+  padding: 5px;
+  background-color: white;
+}
+
+table thead {
+  background: SteelBlue;
+  color: white;
+}
+
+table th,
+table td {
+  padding: 5px 10px;
+}
+
+table tbody tr:nth-child(even) {
+  background: WhiteSmoke;
+}
+
+table tbody tr td:nth-child(2) {
+  text-align: center;
+}
+
+table tbody tr td:nth-child(3),
+table tbody tr td:nth-child(4) {
+  text-align: right;
+  font-family: monospace;
+}
+
+table tfoot {
+  background: #F77F00;
+  color: white;
+  text-align: right;
+}
+
+table tfoot tr th:last-child {
+  font-family: monospace;
+}
+
+table .boton__sumarProducto {
+  padding: 1rem;
+  background-color: green;
+  color: white;
+}
+
+table .boton__restarProducto {
+  padding: 1rem;
+  background-color: red;
+  color: white;
+}
+
+table .boton__vaciarCarrito {
+  padding: 1rem;
+}
+
+.gridProductos {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[4];
+      grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+  margin: 3rem 0;
+}
+
+.gridProductos .producto {
+  padding: 2rem;
+  background-color: white;
+  border: 1px solid crimson;
+  border-radius: 1rem;
+}
+
+.gridProductos .producto .producto__contenedorImagen {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.gridProductos .producto .producto__contenedorImagen .producto__imagen {
+  max-width: 100%;
+}
+
+.gridProductos .producto .producto__informacion {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 2rem;
+}
+
+.gridProductos .producto .producto__informacion .producto__precio {
+  color: #D62828;
+  font-weight: 900;
+}
+
+.gridProductos .producto .producto__boton {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.gridProductos .producto .producto__boton .boton__agregar {
+  width: 100%;
+  background-color: #F77F00;
+  border: none;
+  padding: 2rem;
+  color: white;
+  font-size: 2rem;
+  font-family: "Raleway", sans-serif;
+  font-weight: 700;
+}
