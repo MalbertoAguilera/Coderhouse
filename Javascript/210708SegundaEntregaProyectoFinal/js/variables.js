@@ -11,5 +11,5 @@ const fragment = document.createDocumentFragment();
 const pathImagen = "./assets/img/"
 
 const metodo = new Metodos();
-const carrito = new CarritoDeCompra();
+let carrito = new CarritoDeCompra();
 let productos;

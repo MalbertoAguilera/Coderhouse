@@ -6,13 +6,6 @@ class Producto {
             this.tipo = tipo;
             this.precio = precio;
             this.cantidad = cantidad;
-            this.enlace = enlace;
-
-      }
-      existeStock() {
-            return this.cantidad > 0;
-      }
-      actualizarStock() {
-            --this.cantidad;
-      }
+            this.thumbnailUrl = enlace;
+      };
 };

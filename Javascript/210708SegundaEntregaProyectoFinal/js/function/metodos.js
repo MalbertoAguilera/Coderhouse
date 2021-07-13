@@ -1,25 +1,20 @@
 class Metodos {
 
-      cargarInventario() {
+      async fetchData() {
+            try {
+                  const res = await fetch('./Json/stock.json');
+                  const data = await res.json();
+                  this.insertarProductosEnHTML(data);
+            } catch (error) {
+                  console.log(error);
+            }
 
-            const listadoDeProductos = [];
-            listadoDeProductos.push(new Producto("1", "Cerveza Quilmes Clasica 473ml lata", "cerveza", 58, 5, "cerveza-quilmes-clasica-473.png"));
-            listadoDeProductos.push(new Producto("2", "Cerveza Quilmes Bock 473ml lata", "cerveza", 58, 7, "cerveza-quilmes-bock-473.png"));
-            listadoDeProductos.push(new Producto("3", "Cerveza Quilmes Stout 473ml lata", "cerveza", 58, 2, "cerveza-quilmes-stout-473.png"));
-            listadoDeProductos.push(new Producto("4", "Cerveza Quilmes 1890 473ml lata", "vino", 58, 5, "cerveza-quilmes-1890-473.png"));
-            listadoDeProductos.push(new Producto("5", "Gaseosa Mirinda Naranja 1500ml", "gaseosa", 68, 12, "gaseosa-mirinda-naranja-pet-1500.png"));
-            listadoDeProductos.push(new Producto("6", "Gaseosa 7up 1500ml", "gaseosa", 88, 10, "gaseosa-7up-pet-2250.png"));
-            listadoDeProductos.push(new Producto("7", "Gaseosa Pepsi Pet 2250ml", "gaseosa", 119, 7, "gaseosa-pepsi-pet-2250.png"));
-            listadoDeProductos.push(new Producto("8", "Vino Capriccio Dolcezza 750 ml - Blanco", "vino", 168, 20, "vino-capriccio-dolcezza-dulce-natural-750.png"));
-            listadoDeProductos.push(new Producto("9", "Vino Novecento Raices 750 ml - Tinto Malbec", "vino", 220, 20, "vino-novecento-raices-malbec-750.png"));
-            listadoDeProductos.push(new Producto("10", "Vino Dante Robino Malbec 750 ml", "vino", 270, 20, "vino-dante-robino-malbec-750.png"));
-            return listadoDeProductos;
       }
 
-      insertarProductosEnHTML(productos) {
-            for (const producto of productos) {
+      insertarProductosEnHTML(data) {
+            for (const producto of data) {
                   const imagen = templateCard.querySelector('.producto__imagen');
-                  imagen.src = pathImagen + producto.enlace;
+                  imagen.src = pathImagen + producto.thumbnailUrl;
                   imagen.alt = producto.nombre;
                   templateCard.querySelector('.producto__nombre').textContent = producto.nombre;
                   templateCard.querySelector('.producto__precio').textContent = `$${producto.precio}`;
@@ -78,6 +73,8 @@ class Metodos {
             itemCarrito.appendChild(fragment);
 
             this.insertarFooterTabla();
+
+            localStorage.setItem('carrito', JSON.stringify(carrito));
       }
 
       insertarFooterTabla() {
@@ -144,7 +141,7 @@ class Metodos {
                   }
                   this.insertarCarritoEnHTML();
             }
-            evento.stopPropagation();   
+            evento.stopPropagation();
       }
 
 }
