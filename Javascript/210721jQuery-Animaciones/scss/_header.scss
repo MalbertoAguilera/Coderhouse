@@ -65,6 +65,15 @@
                   .icono {
                         font-size: 8rem;
                         color: white;
+
+                        &:hover{
+                              text-shadow: 1px 1px 2px red, 0 0 1em red, 0 0 0.2em red;
+                        }
+                        
+
+                        &:active{
+                              transform: scale(0.80);
+                        }
                   }
             }
 

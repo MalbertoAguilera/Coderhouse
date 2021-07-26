@@ -1,8 +1,14 @@
-table {
-      // position: absolute;
-
+.tablaCarrito {
+      display: none;
+      position: absolute;
       background-color: white;
       width: 100%;
+      transition: display 5s ease;
+      overflow: hidden;
+
+      &.activado{
+            display: table;
+      }
 
 
       caption {

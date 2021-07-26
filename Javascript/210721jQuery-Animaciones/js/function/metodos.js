@@ -37,7 +37,6 @@ class Metodos {
 
       agregarAlCarrito(evento) {
             //event delegation, para evitar la escucha de todos los elementos
-            console.log(evento.target);
             if (evento.target.classList.contains("boton__agregar")) {
                   let cardProducto = evento.target.parentElement.parentElement;
                   this.setCarrito(cardProducto);
@@ -63,6 +62,7 @@ class Metodos {
                   ...producto
             };
 
+            this.mostrarNotificacion(producto, 'agregar');
             this.insertarCarritoEnHTML();
       }
 
@@ -97,8 +97,13 @@ class Metodos {
 
 
                   const arrayCarrito = Object.values(carrito.elementos);
-                  const cantidadCarrito = arrayCarrito.reduce((acumulador, {cantidad }) => acumulador + cantidad, 0);
-                  const totalCarrito = arrayCarrito.reduce((acumulador, {cantidad, precio}) => acumulador + cantidad * precio, 0);
+                  const cantidadCarrito = arrayCarrito.reduce((acumulador, {
+                        cantidad
+                  }) => acumulador + cantidad, 0);
+                  const totalCarrito = arrayCarrito.reduce((acumulador, {
+                        cantidad,
+                        precio
+                  }) => acumulador + cantidad * precio, 0);
 
                   this.mostrarCantidadEnCarritoHTML(cantidadCarrito);
 
@@ -126,7 +131,7 @@ class Metodos {
       botonVaciar(evento) {
             if (evento.target.classList.contains("boton__vaciarCarrito")) {
                   carrito.elementos = {};
-                  this.borrarNotificacionCarrito();
+                  this.borrarNotificacionIconoCarrito();
                   this.insertarCarritoEnHTML();
             }
             evento.stopPropagation();
@@ -145,17 +150,16 @@ class Metodos {
                   const productoCarrito = carrito.elementos[evento.target.dataset.id];
                   productoCarrito.cantidad--;
                   if (productoCarrito.cantidad === 0) {
-                        // delete productoCarrito;  GENERA ERROR
+                        this.mostrarNotificacion(productoCarrito, 'remover')
                         delete carrito.elementos[evento.target.dataset.id];
-                        this.borrarNotificacionCarrito();   
+                        this.borrarNotificacionIconoCarrito();
                   }
                   this.insertarCarritoEnHTML();
             }
             evento.stopPropagation();
       }
 
-      mostrarCantidadEnCarritoHTML(cantidadCarrito){
-
+      mostrarCantidadEnCarritoHTML(cantidadCarrito) {
             const contadorHTML = document.querySelector('#contador');
             contadorHTML.textContent = cantidadCarrito;
             document.querySelector("#notificacion").classList.add('activado');
@@ -172,20 +176,76 @@ class Metodos {
 
       }
 
-      ordenarPorPrecio(modo){
+      ordenarPorPrecio(modo) {
 
-            if(modo === "Ascendente"){
+            if (modo === "Ascendente") {
                   datos.sort((producto1, producto2) => producto1.precio - producto2.precio);
                   this.insertarProductosEnHTML(datos);
             } else {
                   datos.sort((producto1, producto2) => producto2.precio - producto1.precio);
                   this.insertarProductosEnHTML(datos);
             }
-            
+
       }
 
-      borrarNotificacionCarrito (){
+      borrarNotificacionIconoCarrito() {
             document.querySelector("#notificacion").classList.remove('activado');
+      }
+
+      togglePanelDetalle(evento) {
+
+            if (evento.target.classList.contains('icono')) {
+                  const detalleDeCompra = document.querySelector('#tablaCarrito');
+                  detalleDeCompra.classList.toggle('activado');
+            }
+      }
+
+      mostrarNotificacion(producto, tipoNotificacion) {
+
+            const notificacion = this.crearNotificacion(producto, tipoNotificacion);
+
+            contenedorNotificaciones.appendChild(notificacion);
+
+            $(notificacion).animate({
+                  opacity: '1'
+            },1000).delay(1000).animate({
+                  opacity:'0'
+            },1000);
+
+            this.eliminarNotificacion(notificacion);
+      }
+
+      crearNotificacion(producto, tipoNotificacion) {
+
+            const notificacion = document.createElement('div');
+            const mensaje = document.createElement('span');
+            const mensajeNombreProducto = document.createElement('span');
+
+            notificacion.classList.add('notificaciones');
+
+            if (tipoNotificacion == 'agregar') {
+                  mensaje.textContent = 'AGREGADO AL CARRITO!';
+                  notificacion.classList.add(tipoNotificacion);
+                  
+            } else {
+                  mensaje.textContent = 'ELIMINADO DEL CARRITO!';
+                  notificacion.classList.add(tipoNotificacion);
+            }
+
+            mensajeNombreProducto.classList.add('notificacionProducto');
+            mensajeNombreProducto.textContent = `${producto.nombre}`;
+
+            notificacion.appendChild(mensaje);
+            notificacion.appendChild(mensajeNombreProducto);
+
+            return notificacion;
+      }
+
+      eliminarNotificacion(notificacion) {
+
+            setTimeout(() => {
+                  notificacion.remove();
+            }, 4000)
       }
 
 }

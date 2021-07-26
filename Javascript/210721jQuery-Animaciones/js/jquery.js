@@ -35,6 +35,8 @@ const desplegarSubMenu = evento => {
 const seleccionarFiltro = opcion => {
 
       const ulCategoria = $(opcion).parent().parent();
+      //por defecto
+      $(ulCategoria).find('a').removeClass('activado')
 
       if (opcion.classList.contains('categoria')){
             metodo.ordenarPorCategoria(opcion.textContent);

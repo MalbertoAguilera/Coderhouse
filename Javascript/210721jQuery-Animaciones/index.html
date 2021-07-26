@@ -34,16 +34,16 @@
                         <h1 class="titulo">Pug Drinks</h1>
                   </div>
             </div>
-            <div class="contenedorIcono">
+            <div class="contenedorIcono" id="contenedorIcono">
                   <div class="posicion">
                         <div class="contador" id="notificacion"><span id="contador">3</span></div>
                         <i class="icono fas fa-shopping-cart"></i>
                   </div>
-                  
-            </div> 
+
+            </div>
       </header>
       <div class="container">
-            <table class="tablaCarrito">
+            <table class="tablaCarrito" id="tablaCarrito">
                   <caption>Carrito de compras</caption>
                   <thead>
                         <tr>
@@ -90,6 +90,7 @@
                   </ul>
             </div>
       </div>
+      <div class="contenedorNotificaciones" id="contenedorNotificaciones"></div>
       <footer class="footer">
       </footer>
       <template id="templateCard">
@@ -128,6 +129,7 @@
             </td>
             <td>$ <span>Total Final</span></td>
       </template>
+
       <script src="https://kit.fontawesome.com/f5acbd7984.js" crossorigin="anonymous"></script>
       <script src="./js/jquery/jquery-3.6.0.min.js"></script>
       <script src="./js/class/Producto.js"></script>

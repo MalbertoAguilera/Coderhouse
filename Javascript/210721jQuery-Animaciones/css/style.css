@@ -141,12 +141,30 @@ a {
   color: white;
 }
 
-table {
-  background-color: white;
-  width: 100%;
+.header .contenedorIcono .posicion .icono:hover {
+  text-shadow: 1px 1px 2px red, 0 0 1em red, 0 0 0.2em red;
 }
 
-table caption {
+.header .contenedorIcono .posicion .icono:active {
+  -webkit-transform: scale(0.8);
+          transform: scale(0.8);
+}
+
+.tablaCarrito {
+  display: none;
+  position: absolute;
+  background-color: white;
+  width: 100%;
+  -webkit-transition: display 5s ease;
+  transition: display 5s ease;
+  overflow: hidden;
+}
+
+.tablaCarrito.activado {
+  display: table;
+}
+
+.tablaCarrito caption {
   text-align: left;
   color: silver;
   font-weight: bold;
@@ -155,53 +173,53 @@ table caption {
   background-color: white;
 }
 
-table thead {
+.tablaCarrito thead {
   background: SteelBlue;
   color: white;
 }
 
-table th,
-table td {
+.tablaCarrito th,
+.tablaCarrito td {
   padding: 5px 10px;
 }
 
-table tbody tr:nth-child(even) {
+.tablaCarrito tbody tr:nth-child(even) {
   background: WhiteSmoke;
 }
 
-table tbody tr td:nth-child(2) {
+.tablaCarrito tbody tr td:nth-child(2) {
   text-align: center;
 }
 
-table tbody tr td:nth-child(3),
-table tbody tr td:nth-child(4) {
+.tablaCarrito tbody tr td:nth-child(3),
+.tablaCarrito tbody tr td:nth-child(4) {
   text-align: right;
   font-family: monospace;
 }
 
-table tfoot {
+.tablaCarrito tfoot {
   background: #F77F00;
   color: white;
   text-align: right;
 }
 
-table tfoot tr th:last-child {
+.tablaCarrito tfoot tr th:last-child {
   font-family: monospace;
 }
 
-table .boton__sumarProducto {
+.tablaCarrito .boton__sumarProducto {
   padding: 1rem;
   background-color: green;
   color: white;
 }
 
-table .boton__restarProducto {
+.tablaCarrito .boton__restarProducto {
   padding: 1rem;
   background-color: red;
   color: white;
 }
 
-table .boton__vaciarCarrito {
+.tablaCarrito .boton__vaciarCarrito {
   padding: 1rem;
 }
 
@@ -256,7 +274,8 @@ table .boton__vaciarCarrito {
 }
 
 .contenedorFiltrar .menuFiltrar li .segundoNivel li .tercerNivel li a {
-  background-color: #b68787;
+  color: black;
+  background-color: white;
   z-index: 2;
 }
 
@@ -337,4 +356,62 @@ table .boton__vaciarCarrito {
   font-size: 2rem;
   font-family: "Raleway", sans-serif;
   font-weight: 700;
+}
+
+.gridProductos .producto .producto__boton .boton__agregar:focus {
+  outline: none;
+}
+
+.gridProductos .producto .producto__boton .boton__agregar:active {
+  -webkit-transform: scale(0.9);
+          transform: scale(0.9);
+  background-color: red;
+}
+
+.contenedorNotificaciones {
+  font-size: 2rem;
+  position: fixed;
+  bottom: 1rem;
+  left: 1rem;
+  width: 27vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+.contenedorNotificaciones .notificaciones {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: center;
+  padding: 2rem;
+  margin-bottom: 1rem;
+  border-radius: 1rem;
+  opacity: 0;
+}
+
+.contenedorNotificaciones .notificaciones.agregar {
+  color: white;
+  background-color: green;
+}
+
+.contenedorNotificaciones .notificaciones.remover {
+  color: white;
+  background-color: red;
+}
+
+.contenedorNotificaciones .notificaciones .notificacionProducto {
+  margin-top: 2rem;
 }
