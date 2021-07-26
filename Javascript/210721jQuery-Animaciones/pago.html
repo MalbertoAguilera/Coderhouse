@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Formulario de Tarjeta de Crédito Dinámico</title>
+	<link href="https://fonts.googleapis.com/css?family=Lato|Liu+Jian+Mao+Cao&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+	<div class="contenedor">
+		<section class="tarjeta" id="tarjeta">
+			<div class="frente">
+				<div class="logo-marca">
+				</div>
+				<img src="img/chip-tarjeta.png" class="chip" alt="chip">
+				<div class="datos">
+					<div class="grupo" id="numero">
+						<p class="label">Numero de tarjeta</p>
+						<p class="numero">##### ##### ##### #####</p>
+					</div>
+					<div class="flexbox">
+						<div class="grupo" id="nombre">
+							<p class="label">Nombre Titular</p>
+							<p class="nombre">CoderHouse</p>
+						</div>
+						<div class="grupo" id="vencimiento">
+							<p class="label">Vencimiento</p>
+							<p class="vencimiento"><span class="mes">MM</span> / <span class="year">AA</span></p>
+						</div>
+
+					</div>
+				</div>
+			</div>
+
+			<div class="dorso">
+				<div class="barra-magnetica"></div>
+				<div class="datos">
+					<div class="grupo" id="firma">
+						<p class="label">Firma</p>
+						<div class="firma">
+							<p>CoderHouse</p>
+						</div>
+					</div>
+					<div class="grupo" id="ccv">
+						<p class="label">CCV</p>
+						<p class="ccv"></p>
+					</div>
+				</div>
+				<p class="leyenda">
+					Lorem ipsum dolor sit amet consectetur, adipisicing elit. Accusamus, nulla.
+				</p>
+				<a href="#" class="link-banco">www.tubanco.com</a>
+			</div>
+		</section>
+		<div class="contenedor-boton">
+			<button class="boton-abrir-formulario" id="boton-abrir-formulario">
+				<i class="fas fa-plus"></i>
+			</button>
+		</div>
+		<form action="" id="formulario-tarjeta" class="formulario-tarjeta" method="post">
+			<div class="grupo">
+				<label for="inputNumero">Numero Tarjeta</label>
+				<input type="text" name="inputNumero" id="inputNumero" maxlength="19" autocomplete="off">
+			</div>
+			<div class="grupo">
+				<label for="inputNombre">Nombre</label>
+				<input type="text" name="" id="inputNombre" maxlength="19" autocomplete="off">
+			</div>
+			<div class="flexbox">
+				<div class="grupo vencimiento">
+					<label for="selectMes">Vencimiento</label>
+					<div class="flexbox">
+						<div class="grupo-select">
+							<select name="mes" id="selectMes">
+								<option selected disabled>Mes</option>
+							</select>
+							<i class="fas fa-angle-down"></i>
+						</div>
+						<div class="grupo-select">
+							<select name="year" id="selectYear">
+								<option selected disabled>Año</option>
+							</select>
+							<i class="fas fa-angle-down"></i>
+						</div>
+					</div>
+				</div>
+				<div class="grupo ccv">
+					<label for="inputCvv">CVV</label>
+					<input type="text" id="inputCvv" maxlength="3">
+				</div>
+			</div>
+			<button type="submit" class="boton-enviar">Enviar</button>
+		</form>
+	</div>
+
+	<template id="listaMes">
+		<option value="">mes</option>
+	</template>
+	<template id="listaYear">
+		<option value="">year</option>
+	</template>
+
+	<script src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script>
+	<script src="js/pago.js"></script>
+</body>
+
+</html>
