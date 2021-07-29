@@ -1,0 +1,103 @@
+.header {
+      width: 100%;
+      margin: 0 auto;
+      position: fixed;
+      z-index: 10;
+
+
+      .flexbox {
+            background-color: $color1;
+            width: 80%;
+            padding-top: 2rem;
+            margin: auto;
+            display: flex;
+            justify-content: space-between;
+
+
+            .contenedorBrand {
+
+                  display: flex;
+                  width: 40%;
+
+                  .contenedorPug {
+                        .pugImagen {
+                              width: 200px;
+
+                        }
+                  }
+
+                  .contenedorTitulo {
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+
+                        .titulo {
+                              text-align: center;
+                              font-family: 'Lobster', cursive;
+                              font-size: 6rem;
+                              color: white;
+                        }
+                  }
+            }
+
+            .contenedorIcono {
+
+                  display: flex;
+                  justify-content: center;
+                  align-items: center;
+
+                  .posicion {
+                        position: relative;
+
+                        .contador {
+
+                              display: none;
+
+                              &.activado {
+                                    width: 50px;
+                                    height: 50px;
+                                    margin: auto;
+                                    position: absolute;
+                                    background-color: $color2;
+                                    color: white;
+                                    font-size: 3rem;
+                                    display: flex;
+                                    justify-content: center;
+                                    align-items: center;
+                                    border-radius: 100%;
+                                    left: 80%;
+                                    top: -20%;
+                                    font-family: 'Lobster', cursive;
+                              }
+                        }
+
+                        .icono {
+                              font-size: 8rem;
+                              color: white;
+
+                              &:hover {
+                                    text-shadow: 1px 1px 2px red, 0 0 1em red, 0 0 0.2em red;
+                              }
+
+
+                              &:active {
+                                    transform: scale(0.80);
+                              }
+                        }
+                  }
+
+            }
+      }
+
+      .contenedorPanelCarrito {
+            display: none;
+            width: 80%;
+            margin: auto;            
+            overflow-y: auto;
+            max-height: 900px;
+            border-radius: 10px;
+      }
+
+
+
+}
