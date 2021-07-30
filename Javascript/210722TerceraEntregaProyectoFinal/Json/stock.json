@@ -1,0 +1,203 @@
+[
+      {
+            "id": 1,
+            "nombre": "Cerveza Quilmes Clasica 473ml lata",
+            "tipo": "cervezas",
+            "precio": 58,
+            "stock": 5,
+            "thumbnailUrl": "cerveza-quilmes-clasica-473.png"
+      },
+      {
+            "id": 2,
+            "nombre": "Cerveza Quilmes Bock 473ml lata",
+            "tipo": "cervezas",
+            "precio": 58,
+            "stock": 5,
+            "thumbnailUrl": "cerveza-quilmes-bock-473.png"
+      },
+      {
+            "id": 3,
+            "nombre": "Cerveza Quilmes Stout 473ml lata",
+            "tipo": "cervezas",
+            "precio": 58,
+            "stock": 5,
+            "thumbnailUrl": "cerveza-quilmes-stout-473.png"
+      },
+      {
+            "id": 4,
+            "nombre": "Cerveza Quilmes 1890 473ml lata",
+            "tipo": "cervezas",
+            "precio": 58,
+            "stock": 5,
+            "thumbnailUrl": "cerveza-quilmes-1890-473.png"
+      },
+      {
+            "id": 5,
+            "nombre": "Gaseosa Mirinda Naranja 1500ml",
+            "tipo": "gaseosas",
+            "precio": 68,
+            "stock": 5,
+            "thumbnailUrl": "gaseosa-mirinda-naranja-pet-1500.png"
+      },
+      {
+            "id": 6,
+            "nombre": "Gaseosa 7up 1500ml",
+            "tipo": "gaseosas",
+            "precio": 88,
+            "stock": 5,
+            "thumbnailUrl": "gaseosa-7up-pet-2250.png"
+      },
+      {
+            "id": 7,
+            "nombre": "Gaseosa Pepsi Pet 2250ml",
+            "tipo": "gaseosas",
+            "precio": 119,
+            "stock": 5,
+            "thumbnailUrl": "gaseosa-pepsi-pet-2250.png"
+      },
+      {
+            "id": 8,
+            "nombre": "Vino Capriccio Dolcezza 750 ml - Blanco",
+            "tipo": "vinos",
+            "precio": 168,
+            "stock": 5,
+            "thumbnailUrl": "vino-capriccio-dolcezza-dulce-natural-750.png"
+      },
+      {
+            "id": 9,
+            "nombre": "Vino Novecento Raices 750 ml - Tinto Malbec",
+            "tipo": "vinos",
+            "precio": 220,
+            "stock": 5,
+            "thumbnailUrl": "vino-novecento-raices-malbec-750.png"
+      },
+      {
+            "id": 10,
+            "nombre": "Vino Dante Robino Malbec 750 ml",
+            "tipo": "vinos",
+            "precio": 270,
+            "stock": 5,
+            "thumbnailUrl": "vino-dante-robino-malbec-750.png"
+      },
+      {
+            "id": 11,
+            "nombre": "Agua sin Gas Nestle Pureza Vital 6.3lts",
+            "tipo": "aguas",
+            "precio": 609,
+            "stock": 5,
+            "thumbnailUrl": "sec-aguas-nestle-bidon-6L.jpg"
+      },
+      {
+            "id": 12,
+            "nombre": "Bebida isotónica Gatorade Manzana 500ml",
+            "tipo": "isotonicas",
+            "precio": 60,
+            "stock": 5,
+            "thumbnailUrl": "isotonica-gatorade-manzana-500.png"
+      },
+      {
+            "id": 13,
+            "nombre": "Cerveza Andes Origen IPA Lata 473ml",
+            "tipo": "cervezas",
+            "precio": 76,
+            "stock": 5,
+            "thumbnailUrl": "cerveza-andes-origen-ipa-473.png"
+      },
+      {
+            "id": 14,
+            "nombre": "Cerveza Stella Artois Lata 473ml",
+            "tipo": "cervezas",
+            "precio": 84,
+            "stock": 5,
+            "thumbnailUrl": "cerveza-stella-artois-vintage-473.png"
+      },
+      {
+            "id": 15,
+            "nombre": "Cerveza Corona 330ml",
+            "tipo": "cervezas",
+            "precio": 92,
+            "stock": 5,
+            "thumbnailUrl": "cerveza-corona-330.png"
+      },
+      {
+            "id": 16,
+            "nombre": "Cerveza Stella Artois Noire Lata 473ml",
+            "tipo": "cervezas",
+            "precio": 84,
+            "stock": 5,
+            "thumbnailUrl": "cerveza-stella-artois-noire-473.png"
+      },
+      {
+            "id": 17,
+            "nombre": "Cerveza Patagonia Amber Lager 473ml",
+            "tipo": "cervezas",
+            "precio": 97,
+            "stock": 5,
+            "thumbnailUrl": "cerveza-patagonia-amber-lager-473.png"
+      },
+      {
+            "id": 18,
+            "nombre": "Cerveza Budweiser Lata 473ml",
+            "tipo": "cervezas",
+            "precio": 65,
+            "stock": 5,
+            "thumbnailUrl": "cerveza-budweiser-original-473.png"
+      },
+      {
+            "id": 19,
+            "nombre": "Bebida isotónica Gatorade Cool Blue 500ml",
+            "tipo": "isotonicas",
+            "precio": 60,
+            "stock": 5,
+            "thumbnailUrl": "isotonica-gatorade-cool-blue-500.png"
+      },
+      {
+            "id": 20,
+            "nombre": "cerveza patagonia amber lager 730ml",
+            "tipo": "cervezas",
+            "precio": 173,
+            "stock": 5,
+            "thumbnailUrl": "cerveza-patagonia-amber-lager-730.png"
+      },
+      {
+            "id": 21,
+            "nombre": "Cerveza Patagonia IPA 24.7 473ml",
+            "tipo": "cervezas",
+            "precio": 97,
+            "stock": 5,
+            "thumbnailUrl": "cerveza-patagonia-ipa-24-7-473.png"
+      },
+      {
+            "id": 22,
+            "nombre": "Bebida isotónica Gatorade Frutas Tropicales 500ml",
+            "tipo": "isotonicas",
+            "precio": 60,
+            "stock": 5,
+            "thumbnailUrl": "isotonica-gatorade-frutas-tropicales.png"
+      },
+      {
+            "id": 23,
+            "nombre": "Bebida isotónica Gatorade Naranja 500ml",
+            "tipo": "isotonicas",
+            "precio": 60,
+            "stock": 5,
+            "thumbnailUrl": "isotonica-gatorade-naranja-500.png"
+      },
+      {
+            "id": 24,
+            "nombre": "Bebida isotónica Gatorade Manzana 1250ml",
+            "tipo": "isotonicas",
+            "precio": 100,
+            "stock": 5,
+            "thumbnailUrl": "gatorade-manzana-125L.png"
+      },
+      {
+            "id": 25,
+            "nombre": "Bebida isotónica Gatorade Naranja 1250ml",
+            "tipo": "isotonicas",
+            "precio": 100,
+            "stock": 5,
+            "thumbnailUrl": "gatorade-naranja-125L.png"
+      }
+      
+]
