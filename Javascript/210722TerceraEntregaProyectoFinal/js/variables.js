@@ -4,6 +4,10 @@ const itemCarrito = document.querySelector('#itemCarrito');
 const footerTabla = document.querySelector('#footerTabla');
 const iconoCarrito = document.querySelector('#contenedorIcono');
 const contenedorNotificaciones = document.querySelector('#contenedorNotificaciones');
+const modal = document.querySelector ('#mensaje-modal');
+const contenedorModal = document.querySelector ('#contenedor-modal');
+const botonReset = document.querySelector ('#finalizarOperacion');
+
 //punteros a template
 const templateCard = document.querySelector('#templateCard').content;
 const templateCarrito = document.querySelector('#templateCarrito').content;

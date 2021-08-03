@@ -15,7 +15,8 @@ class Metodos {
             })
 
             footerTabla.addEventListener("click", evento => {
-                  this.botonVaciarCarrito(evento);
+                  this.VaciarCarrito(evento);
+                  this.generarPedido(evento);
             })
 
             itemCarrito.addEventListener('click', evento => {
@@ -24,6 +25,10 @@ class Metodos {
 
             contenedorIcono.addEventListener('click', evento => {
                   this.togglePanelDetalle(evento);
+            })
+
+            contenedorModal.addEventListener('click', evento => {
+                  this.resetPagina(evento);
             })
 
             $('#menuFiltrar li:has(ul)').click( evento => {
@@ -146,10 +151,40 @@ class Metodos {
             }
       }
 
-      botonVaciarCarrito(evento) {
-            evento.preventDefault();
+      VaciarCarrito(evento) {
+            
 
             if (evento.target.classList.contains("boton__vaciarCarrito")) {
+                  evento.preventDefault();
+                  carrito.elementos = {};
+                  this.borrarNotificacionIconoCarrito();
+                  this.insertarCarritoEnHTML();
+            }
+
+            evento.stopPropagation();
+      }
+
+      generarPedido(evento){
+
+            if(evento.target.classList.contains("boton__FinalizarCompra")){
+                  evento.preventDefault();
+                  this.mostrarModal();
+            }
+
+            evento.stopPropagation();
+      }
+
+      mostrarModal(){
+            contenedorModal.style.opacity ="1";
+            contenedorModal.style.visibility ="visible";
+            modal.classList.toggle('close');
+      }
+
+      resetPagina(evento){
+
+            console.log(evento.target);
+
+            if(evento.target.classList.contains("finalizar-modal")){
                   carrito.elementos = {};
                   this.borrarNotificacionIconoCarrito();
                   this.insertarCarritoEnHTML();

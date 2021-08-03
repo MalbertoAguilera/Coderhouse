@@ -93,8 +93,19 @@
             </div>
       </div>
       <div class="contenedorNotificaciones" id="contenedorNotificaciones"></div>
-      <footer class="footer">
-      </footer>
+
+      <div class="contenedor-modal" id="contenedor-modal">
+            <div class="mensaje-modal close" id="mensaje-modal">
+                  <p class="texto-modal">Su orden de compra fue procesado con el NUMERO DE PEDIDO #1231-1231</p>
+                  <div>
+                        <img class="imagen-modal" src="./assets/img/modal/confirmacion.png" alt="success">
+
+                  </div>
+                  <div>
+                        <a id="finalizarOperacion" class="finalizar-modal" href="index.html">Compra Finalizada</a>
+                  </div>
+            </div>
+      </div>
 
 
       <!--TEMPLATES-->
@@ -130,7 +141,7 @@
                   </td>
             </tr>
       </template>
-      
+
       <template id="templateFooter">
             <th colspan="2">Total productos</th>
             <td>cantidad Total</td>
@@ -140,7 +151,6 @@
                         <a href="#" class="boton__vaciarCarrito" id="vaciarCarrito">VACIAR CARRITO</a>
                         <a href="#" class="boton__FinalizarCompra" id="boton__FinalizarCompra">COMPRAR</a>
                   </div>
-
             </td>
       </template>
 

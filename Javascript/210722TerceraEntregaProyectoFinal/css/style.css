@@ -17,7 +17,8 @@ html {
 }
 
 body {
-  background-color: #003049;
+  background-image: -webkit-gradient(linear, left top, right top, from(#6a11cb), to(#2575fc));
+  background-image: linear-gradient(to right, #6a11cb 0%, #2575fc 100%);
   font-size: 1.6rem;
   line-height: 1.5rem;
   font-family: "Raleway", sans-serif;
@@ -59,10 +60,12 @@ tr, th {
   margin: 0 auto;
   position: fixed;
   z-index: 10;
+  background-image: -webkit-gradient(linear, left top, right top, from(#6a11cb), to(#2575fc));
+  background-image: linear-gradient(to right, #6a11cb 0%, #2575fc 100%);
 }
 
 .header .flexbox {
-  background-color: #003049;
+  background-color: transparent;
   width: 80%;
   padding-top: 2rem;
   margin: auto;
@@ -166,14 +169,14 @@ tr, th {
   width: 80%;
   margin: auto;
   overflow-y: auto;
-  max-height: 500px;
+  max-height: 60vh;
   border-radius: 10px;
 }
 
 .tablaCarrito {
   background-color: white;
   width: 100%;
-  font-size: 2rem;
+  font-size: 1.7rem;
   font-weight: bold;
   border-radius: 10px;
 }
@@ -184,6 +187,11 @@ tr, th {
   position: -webkit-sticky;
   position: sticky;
   top: 0;
+}
+
+.tablaCarrito th img {
+  width: 80px;
+  height: 80px;
 }
 
 .tablaCarrito th,
@@ -301,7 +309,7 @@ tr, th {
 }
 
 .contenedorFiltrar {
-  background-color: #003049;
+  background-color: transparent;
   width: 15%;
   min-width: 300px;
   padding: 0 2rem;
@@ -494,4 +502,84 @@ tr, th {
 
 .contenedorNotificaciones .notificaciones .notificacionProducto {
   margin-top: 2rem;
+}
+
+.contenedor-modal {
+  opacity: 0;
+  visibility: hidden;
+  position: fixed;
+  z-index: 1000;
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.contenedor-modal .mensaje-modal {
+  width: 60%;
+  height: 50%;
+  background: #fff;
+  overflow: hidden;
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  border-radius: 1rem;
+  -webkit-transition: -webkit-transform 1s;
+  transition: -webkit-transform 1s;
+  transition: transform 1s;
+  transition: transform 1s, -webkit-transform 1s;
+  -webkit-transform: translateY(0%);
+          transform: translateY(0%);
+}
+
+.contenedor-modal .mensaje-modal.close {
+  -webkit-transform: translateY(-200%);
+          transform: translateY(-200%);
+}
+
+.contenedor-modal .mensaje-modal .texto-modal {
+  font-size: 3rem;
+}
+
+.contenedor-modal .mensaje-modal .imagen-modal {
+  width: 20%;
+}
+
+.contenedor-modal .mensaje-modal .finalizar-modal {
+  display: inline-block;
+  padding: 2rem 2rem;
+  width: 400px;
+  border-radius: 1rem;
+  border: 1px solid #283773;
+  text-align: center;
+  font-size: 3rem;
+  color: #283773;
+}
+
+.contenedor-modal .mensaje-modal .finalizar-modal:hover {
+  background-color: #283773;
+  color: #fff;
+}
+
+.contenedor-modal .mensaje-modal .finalizar-modal:active {
+  -webkit-transform: scale(0.9);
+          transform: scale(0.9);
 }
