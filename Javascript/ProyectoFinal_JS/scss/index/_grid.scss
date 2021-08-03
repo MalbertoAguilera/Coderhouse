@@ -1,0 +1,60 @@
+.gridProductos {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 2rem;
+      width: 80%;
+
+      .producto {
+            padding: 2rem;
+            background-color: white;
+            border: 1px solid crimson;
+            border-radius: 1rem;
+
+            .producto__contenedorImagen {
+                  display: flex;
+                  justify-content: center;
+
+                  .producto__imagen {
+                        max-width: 100%;
+                  }
+            }
+
+            .producto__informacion {
+                  display: flex;
+                  flex-direction: column;
+                  justify-content: center;
+                  align-items: center;
+                  padding: 2rem;
+
+                  .producto__precio {
+                        color: $color2;
+                        font-weight: 900;
+                  }
+            }
+
+            .producto__boton {
+                  display: flex;
+                  justify-content: center;
+
+                  .boton__agregar {
+                        width: 100%;
+                        background-color: $color3;
+                        border: none;
+                        padding: 2rem;
+                        color: white;
+                        font-size: 2rem;
+                        font-family: $font-family2;
+                        font-weight: 700;
+
+                        &:focus{
+                              outline: none;
+                        }
+
+                        &:active{
+                              transform: scale(0.90);
+                              background-color: red;
+                        }
+                  }
+            }
+      }
+}

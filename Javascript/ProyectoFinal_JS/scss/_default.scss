@@ -1,0 +1,43 @@
+/* apply a natural box layout model to all elements, but allowing components to change */
+html {
+      box-sizing: border-box;
+      font-size: 62.5%;
+}
+
+*,
+*:before,
+*:after {
+      box-sizing: inherit;
+      padding: 0;
+      margin: 0;
+}
+body{
+      background-image: linear-gradient(to right, #6a11cb 0%, #2575fc 100%);
+      font-size: 1.6rem;
+      line-height: 1.5rem;
+      font-family: $font-family2;
+
+      .container{
+            width: 80%;
+            margin: auto;
+            
+            .flexboxProductos{
+                  padding-top: 30rem;
+                  display: flex;
+                  flex-direction: row;
+                  justify-content: space-between;
+            }
+      }
+}
+
+ul{
+      list-style: none;
+}
+
+a{
+      text-decoration: none;
+}
+
+tr,th {
+      text-align: center;
+}

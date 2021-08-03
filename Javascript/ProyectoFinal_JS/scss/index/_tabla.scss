@@ -1,0 +1,126 @@
+.tablaCarrito {
+      // display: none;
+      background-color: white;
+      width: 100%;
+      font-size: 1.7rem;
+      font-weight: bold;
+      border-radius: 10px;
+
+
+      thead {
+            background: SteelBlue;
+            color: white;
+            position: sticky;
+            top: 0;
+      }
+
+      th img {
+            width: 80px;
+            height: 80px;
+      }
+
+      th,
+      td {
+            padding: 20px 10px;
+            text-align: center;
+      }
+
+      tbody tr:nth-child(even) {
+            background: WhiteSmoke;
+      }
+
+
+      tfoot {
+            background: $color2;
+            color: white;
+            text-align: center;
+            position: sticky;
+            bottom: 0px;
+            width: 100%;
+      }
+
+      .boxBotones {
+            display: flex;
+            justify-content: center;
+            font-size: 3rem;
+      }
+
+      .boton__sumarProducto {
+            padding: 2rem;
+            margin: 0 1rem;
+            background-color: green;
+            color: white;
+            border-radius: 10px;
+
+            &:active {
+                  transform: scale(0.8);
+            }
+      }
+
+      .boton__restarProducto {
+            padding: 2rem;
+            margin: 0 1rem;
+            background-color: red;
+            color: white;
+            border: none;
+            border-radius: 10px;
+
+            &:active {
+                  transform: scale(0.8);
+            }
+      }
+
+      .boton__eliminar {
+
+            padding: 2rem;
+            margin: 0 1rem;
+            background-color: gray;
+            color: white;
+            border: none;
+            border-radius: 10px;
+
+            &:active {
+                  transform: scale(0.8);
+            }
+
+      }
+
+
+      .contenedorBotones {
+
+            display: flex;
+            justify-content: space-evenly;
+
+            .boton__vaciarCarrito {
+                  color: gray;
+                  padding: 1.5rem;
+                  background-color: white;
+                  border-radius: 5px;
+
+                  &:hover {
+                        color: red;
+                        background-color: white;
+                  }
+
+                  &:active {
+                        transform: scale(0.8);
+                  }
+            }
+
+            .boton__FinalizarCompra {
+                  color: gray;
+                  padding: 1.5rem;
+                  background-color: white;
+                  border-radius: 5px;
+
+                  &:hover {
+                        color: green;
+                        background-color: white;
+                  }
+
+                  &:active {
+                        transform: scale(0.8);
+                  }
+            }
+      }
+}

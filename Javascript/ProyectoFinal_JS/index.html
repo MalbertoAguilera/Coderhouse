@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <!--meta-->
+      <meta name="title" content="--">
+      <meta name="description" content="--">
+      <meta name="keywords" content="">
+      <meta name="author" content="">
+      <meta name="copyright" content="">
+      <meta name="ROBOTS" content="INDEX, FOLLOW">
+      <meta name="ROBOTS" content="ALL">
+      <meta name="language" content="Spanish">
+      <meta http-equiv="Content-Language" content="es">
+      <meta name="distribution" content="Global">
+      <meta name="city" content="Buenos Aires">
+      <meta name="country" content="Argentina">
+      <meta name="doc-type" content="Web Page">
+      <meta name="revisit-after" content="7 days">
+      <link rel="stylesheet" href=".\css\style.css">
+      <title>Tercera entrega Proyecto final</title>
+</head>
+
+<body>
+      <header class="header">
+            <div class="flexbox">
+                  <div class="contenedorBrand">
+                        <div class="contenedorPug">
+                              <img class="pugImagen" src="./assets/img/brand/pugdogs.png" alt="">
+                        </div>
+                        <div class="contenedorTitulo">
+                              <h1 class="titulo">Pug Drinks</h1>
+                        </div>
+                  </div>
+                  <div class="contenedorIcono" id="contenedorIcono">
+                        <div class="posicion">
+                              <div class="contador" id="notificacion"><span id="contador">3</span></div>
+                              <i class="icono fas fa-shopping-cart"></i>
+                        </div>
+                  </div>
+            </div>
+            <div class="contenedorPanelCarrito" id="contenedorPanelCarrito">
+                  <table class="tablaCarrito" id="tablaCarrito">
+                        <thead>
+                              <tr>
+                                    <th></th>
+                                    <th>NOMBRE</th>
+                                    <th>CANTIDAD</th>
+                                    <th>TOTAL</th>
+                                    <th></th>
+                              </tr>
+                        </thead>
+                        <tbody id="itemCarrito"></tbody>
+                        <tfoot>
+                              <tr id="footerTabla">
+                                    <th colspan="5" style="text-align:center;">Carrito vacío</th>
+                              </tr>
+                        </tfoot>
+                  </table>
+            </div>
+      </header>
+      <div class="container">
+            <div class="flexboxProductos">
+                  <div class="contenedorFiltrar">
+                        <ul class="menuFiltrar" id="menuFiltrar">
+                              <li><a href="#" class="subMenu">Filtrar</a>
+                                    <ul class="subMenu segundoNivel">
+                                          <li><a href="#" class="subMenu">Categorias</i></a>
+                                                <ul class="subMenu tercerNivel">
+                                                      <li class="activado"><a href="#" class="categoria">Todos</a></li>
+                                                      <li><a href="#" class="categoria">Gaseosas</a></li>
+                                                      <li><a href="#" class="categoria">Cervezas</a></li>
+                                                      <li><a href="#" class="categoria">Vinos</a></li>
+                                                      <li><a href="#" class="categoria">Aguas</a></li>
+                                                      <li><a href="#" class="categoria">Isotonicas</a></li>
+                                                </ul>
+                                          </li>
+                                          <li><a href="#" class="subMenu">Precios</a>
+                                                <ul class="subMenu tercerNivel">
+                                                      <li><a href="#" class="precio">Descendente</a></li>
+                                                      <li><a href="#" class="precio">Ascendente</i></a></li>
+                                                </ul>
+                                          </li>
+                                    </ul>
+                              </li>
+                        </ul>
+                  </div>
+                  <ul class="gridProductos">
+                  </ul>
+            </div>
+      </div>
+      <div class="contenedorNotificaciones" id="contenedorNotificaciones"></div>
+
+      <div class="contenedor-modal" id="contenedor-modal">
+            <div class="mensaje-modal close" id="mensaje-modal">
+                  <p class="texto-modal">Su orden de compra fue procesado con el NUMERO DE PEDIDO #1231-1231</p>
+                  <div>
+                        <img class="imagen-modal" src="./assets/img/modal/confirmacion.png" alt="success">
+
+                  </div>
+                  <div>
+                        <a id="finalizarOperacion" class="finalizar-modal" href="index.html">Compra Finalizada</a>
+                  </div>
+            </div>
+      </div>
+
+
+      <!--TEMPLATES-->
+      <template id="templateCard">
+            <!--cardProducto-->
+            <li class="producto">
+                  <div class="producto__contenedorImagen">
+                        <img class="producto__imagen" src="ruta" alt="descripcion">
+                  </div>
+                  <div class="producto__informacion">
+                        <p class="producto__nombre">Nombre del producto</p>
+                        <p class="producto__precio">Precio</p>
+                  </div>
+                  <div class="producto__boton">
+                        <button class="boton__agregar">Agregar al carrito</button>
+                  </div>
+            </li>
+      </template>
+
+      <!-- TEMPLATE tabla carrito-->
+      <template id="templateCarrito">
+            <tr>
+                  <th><img src="" alt=""></th>
+                  <td>Nombre</td>
+                  <td>cantidad</td>
+                  <td>$ <span>precio</span></td>
+                  <td>
+                        <div class="boxBotones">
+                              <a href="#" id="botonSumar" class="boton__sumarProducto"> + </a>
+                              <a href="#" id="botonRestar" class="boton__restarProducto"> - </a>
+                              <a href="#" id="botonEliminar" class="boton__eliminar"> X </a>
+                        </div>
+                  </td>
+            </tr>
+      </template>
+
+      <template id="templateFooter">
+            <th colspan="2">Total productos</th>
+            <td>cantidad Total</td>
+            <td>$ <span>Total Final</span></td>
+            <td>
+                  <div class="contenedorBotones">
+                        <a href="#" class="boton__vaciarCarrito" id="vaciarCarrito">VACIAR CARRITO</a>
+                        <a href="#" class="boton__FinalizarCompra" id="boton__FinalizarCompra">COMPRAR</a>
+                  </div>
+            </td>
+      </template>
+
+      <script src="https://kit.fontawesome.com/f5acbd7984.js" crossorigin="anonymous"></script>
+      <script src="./js/jquery/jquery-3.6.0.min.js"></script>
+      <script src="./js/class/Producto.js"></script>
+      <script src="./js/class/CarritoDeCompra.js"></script>
+      <script src="./js/function/metodos.js"></script>
+      <script src="./js/variables.js"></script>
+      <script src="./js/app.js"></script>
+</body>
+
+</html>

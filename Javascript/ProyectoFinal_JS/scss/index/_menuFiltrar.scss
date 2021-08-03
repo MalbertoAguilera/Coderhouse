@@ -1,0 +1,73 @@
+.contenedorFiltrar {
+      background-color: transparent;
+      width: 15%;
+      min-width: 300px;
+      padding: 0 2rem;
+      display: inline-block;
+      line-height: 2rem;
+      text-align: center;
+      position: relative;
+      
+
+      //ul general
+      .menuFiltrar {
+            position: fixed;
+            width: 10%;
+            li {
+                  a {
+                        color: white;
+                        display: block;
+                        padding: 1.5rem 2rem;
+                        background-color: rgb(97, 97, 97);
+                        font-size: 1.8rem;
+                        display: flex;
+                        justify-content: space-evenly;
+                        z-index: 2;
+
+                        span {
+                              width: 90%;
+                        }
+
+                        .icono {
+                              font-size: 1.5rem;
+                              line-height: 1.8rem;
+                        }
+
+
+                        &:hover {
+                              background-color: $color2;
+                        }
+                  }
+
+                  //categorias-Precio
+                  .segundoNivel {
+                        display: none;
+
+                        li {
+
+                              //items
+                              .tercerNivel {
+                                    display: none;
+
+                                    li {
+                                          a {
+                                                color: black;
+                                                background-color: white;
+                                                z-index: 2;
+
+                                                &.activado{
+                                                      background-color: $color4;
+                                                }
+                                          }
+                                    }
+                              }
+                        }
+
+                  }
+            }
+
+            .activado>a {
+                  background-color: $color2;
+            }
+      }
+}

@@ -1,0 +1,585 @@
+@import url("https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lobster&display=swap");
+/* apply a natural box layout model to all elements, but allowing components to change */
+html {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background-image: -webkit-gradient(linear, left top, right top, from(#6a11cb), to(#2575fc));
+  background-image: linear-gradient(to right, #6a11cb 0%, #2575fc 100%);
+  font-size: 1.6rem;
+  line-height: 1.5rem;
+  font-family: "Raleway", sans-serif;
+}
+
+body .container {
+  width: 80%;
+  margin: auto;
+}
+
+body .container .flexboxProductos {
+  padding-top: 30rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+tr, th {
+  text-align: center;
+}
+
+.header {
+  width: 100%;
+  margin: 0 auto;
+  position: fixed;
+  z-index: 10;
+  background-image: -webkit-gradient(linear, left top, right top, from(#6a11cb), to(#2575fc));
+  background-image: linear-gradient(to right, #6a11cb 0%, #2575fc 100%);
+}
+
+.header .flexbox {
+  background-color: transparent;
+  width: 80%;
+  padding-top: 2rem;
+  margin: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.header .flexbox .contenedorBrand {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 40%;
+}
+
+.header .flexbox .contenedorBrand .contenedorPug .pugImagen {
+  width: 200px;
+}
+
+.header .flexbox .contenedorBrand .contenedorTitulo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.header .flexbox .contenedorBrand .contenedorTitulo .titulo {
+  text-align: center;
+  font-family: 'Lobster', cursive;
+  font-size: 6rem;
+  color: white;
+}
+
+.header .flexbox .contenedorIcono {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.header .flexbox .contenedorIcono .posicion {
+  position: relative;
+}
+
+.header .flexbox .contenedorIcono .posicion .contador {
+  display: none;
+}
+
+.header .flexbox .contenedorIcono .posicion .contador.activado {
+  width: 50px;
+  height: 50px;
+  margin: auto;
+  position: absolute;
+  background-color: #D62828;
+  color: white;
+  font-size: 3rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 100%;
+  left: 80%;
+  top: -20%;
+  font-family: 'Lobster', cursive;
+}
+
+.header .flexbox .contenedorIcono .posicion .icono {
+  font-size: 8rem;
+  color: white;
+}
+
+.header .flexbox .contenedorIcono .posicion .icono:hover {
+  text-shadow: 1px 1px 2px red, 0 0 1em red, 0 0 0.2em red;
+}
+
+.header .flexbox .contenedorIcono .posicion .icono:active {
+  -webkit-transform: scale(0.8);
+          transform: scale(0.8);
+}
+
+.header .contenedorPanelCarrito {
+  display: none;
+  width: 80%;
+  margin: auto;
+  overflow-y: auto;
+  max-height: 60vh;
+  border-radius: 10px;
+}
+
+.tablaCarrito {
+  background-color: white;
+  width: 100%;
+  font-size: 1.7rem;
+  font-weight: bold;
+  border-radius: 10px;
+}
+
+.tablaCarrito thead {
+  background: SteelBlue;
+  color: white;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+}
+
+.tablaCarrito th img {
+  width: 80px;
+  height: 80px;
+}
+
+.tablaCarrito th,
+.tablaCarrito td {
+  padding: 20px 10px;
+  text-align: center;
+}
+
+.tablaCarrito tbody tr:nth-child(even) {
+  background: WhiteSmoke;
+}
+
+.tablaCarrito tfoot {
+  background: #D62828;
+  color: white;
+  text-align: center;
+  position: -webkit-sticky;
+  position: sticky;
+  bottom: 0px;
+  width: 100%;
+}
+
+.tablaCarrito .boxBotones {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-size: 3rem;
+}
+
+.tablaCarrito .boton__sumarProducto {
+  padding: 2rem;
+  margin: 0 1rem;
+  background-color: green;
+  color: white;
+  border-radius: 10px;
+}
+
+.tablaCarrito .boton__sumarProducto:active {
+  -webkit-transform: scale(0.8);
+          transform: scale(0.8);
+}
+
+.tablaCarrito .boton__restarProducto {
+  padding: 2rem;
+  margin: 0 1rem;
+  background-color: red;
+  color: white;
+  border: none;
+  border-radius: 10px;
+}
+
+.tablaCarrito .boton__restarProducto:active {
+  -webkit-transform: scale(0.8);
+          transform: scale(0.8);
+}
+
+.tablaCarrito .boton__eliminar {
+  padding: 2rem;
+  margin: 0 1rem;
+  background-color: gray;
+  color: white;
+  border: none;
+  border-radius: 10px;
+}
+
+.tablaCarrito .boton__eliminar:active {
+  -webkit-transform: scale(0.8);
+          transform: scale(0.8);
+}
+
+.tablaCarrito .contenedorBotones {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+.tablaCarrito .contenedorBotones .boton__vaciarCarrito {
+  color: gray;
+  padding: 1.5rem;
+  background-color: white;
+  border-radius: 5px;
+}
+
+.tablaCarrito .contenedorBotones .boton__vaciarCarrito:hover {
+  color: red;
+  background-color: white;
+}
+
+.tablaCarrito .contenedorBotones .boton__vaciarCarrito:active {
+  -webkit-transform: scale(0.8);
+          transform: scale(0.8);
+}
+
+.tablaCarrito .contenedorBotones .boton__FinalizarCompra {
+  color: gray;
+  padding: 1.5rem;
+  background-color: white;
+  border-radius: 5px;
+}
+
+.tablaCarrito .contenedorBotones .boton__FinalizarCompra:hover {
+  color: green;
+  background-color: white;
+}
+
+.tablaCarrito .contenedorBotones .boton__FinalizarCompra:active {
+  -webkit-transform: scale(0.8);
+          transform: scale(0.8);
+}
+
+.contenedorFiltrar {
+  background-color: transparent;
+  width: 15%;
+  min-width: 300px;
+  padding: 0 2rem;
+  display: inline-block;
+  line-height: 2rem;
+  text-align: center;
+  position: relative;
+}
+
+.contenedorFiltrar .menuFiltrar {
+  position: fixed;
+  width: 10%;
+}
+
+.contenedorFiltrar .menuFiltrar li a {
+  color: white;
+  display: block;
+  padding: 1.5rem 2rem;
+  background-color: #616161;
+  font-size: 1.8rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  z-index: 2;
+}
+
+.contenedorFiltrar .menuFiltrar li a span {
+  width: 90%;
+}
+
+.contenedorFiltrar .menuFiltrar li a .icono {
+  font-size: 1.5rem;
+  line-height: 1.8rem;
+}
+
+.contenedorFiltrar .menuFiltrar li a:hover {
+  background-color: #D62828;
+}
+
+.contenedorFiltrar .menuFiltrar li .segundoNivel {
+  display: none;
+}
+
+.contenedorFiltrar .menuFiltrar li .segundoNivel li .tercerNivel {
+  display: none;
+}
+
+.contenedorFiltrar .menuFiltrar li .segundoNivel li .tercerNivel li a {
+  color: black;
+  background-color: white;
+  z-index: 2;
+}
+
+.contenedorFiltrar .menuFiltrar li .segundoNivel li .tercerNivel li a.activado {
+  background-color: #FCBF49;
+}
+
+.contenedorFiltrar .menuFiltrar .activado > a {
+  background-color: #D62828;
+}
+
+.gridProductos {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[4];
+      grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+  width: 80%;
+}
+
+.gridProductos .producto {
+  padding: 2rem;
+  background-color: white;
+  border: 1px solid crimson;
+  border-radius: 1rem;
+}
+
+.gridProductos .producto .producto__contenedorImagen {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.gridProductos .producto .producto__contenedorImagen .producto__imagen {
+  max-width: 100%;
+}
+
+.gridProductos .producto .producto__informacion {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 2rem;
+}
+
+.gridProductos .producto .producto__informacion .producto__precio {
+  color: #D62828;
+  font-weight: 900;
+}
+
+.gridProductos .producto .producto__boton {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.gridProductos .producto .producto__boton .boton__agregar {
+  width: 100%;
+  background-color: #F77F00;
+  border: none;
+  padding: 2rem;
+  color: white;
+  font-size: 2rem;
+  font-family: "Raleway", sans-serif;
+  font-weight: 700;
+}
+
+.gridProductos .producto .producto__boton .boton__agregar:focus {
+  outline: none;
+}
+
+.gridProductos .producto .producto__boton .boton__agregar:active {
+  -webkit-transform: scale(0.9);
+          transform: scale(0.9);
+  background-color: red;
+}
+
+.contenedorNotificaciones {
+  font-size: 2rem;
+  position: fixed;
+  bottom: 1rem;
+  left: 1rem;
+  width: 27vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  z-index: 100;
+}
+
+.contenedorNotificaciones .notificaciones {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: center;
+  padding: 2rem;
+  margin-bottom: 1rem;
+  border-radius: 1rem;
+  opacity: 0;
+}
+
+.contenedorNotificaciones .notificaciones.agregar {
+  color: white;
+  background-color: green;
+}
+
+.contenedorNotificaciones .notificaciones.remover {
+  color: white;
+  background-color: red;
+}
+
+.contenedorNotificaciones .notificaciones .notificacionProducto {
+  margin-top: 2rem;
+}
+
+.contenedor-modal {
+  opacity: 0;
+  visibility: hidden;
+  position: fixed;
+  z-index: 1000;
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.contenedor-modal .mensaje-modal {
+  width: 60%;
+  height: 50%;
+  background: #fff;
+  overflow: hidden;
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  border-radius: 1rem;
+  -webkit-transition: -webkit-transform 1s;
+  transition: -webkit-transform 1s;
+  transition: transform 1s;
+  transition: transform 1s, -webkit-transform 1s;
+  -webkit-transform: translateY(0%);
+          transform: translateY(0%);
+}
+
+.contenedor-modal .mensaje-modal.close {
+  -webkit-transform: translateY(-200%);
+          transform: translateY(-200%);
+}
+
+.contenedor-modal .mensaje-modal .texto-modal {
+  font-size: 3rem;
+}
+
+.contenedor-modal .mensaje-modal .imagen-modal {
+  width: 20%;
+}
+
+.contenedor-modal .mensaje-modal .finalizar-modal {
+  display: inline-block;
+  padding: 2rem 2rem;
+  width: 400px;
+  border-radius: 1rem;
+  border: 1px solid #283773;
+  text-align: center;
+  font-size: 3rem;
+  color: #283773;
+}
+
+.contenedor-modal .mensaje-modal .finalizar-modal:hover {
+  background-color: #283773;
+  color: #fff;
+}
+
+.contenedor-modal .mensaje-modal .finalizar-modal:active {
+  -webkit-transform: scale(0.9);
+          transform: scale(0.9);
+}
