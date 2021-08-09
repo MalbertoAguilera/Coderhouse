@@ -81,7 +81,7 @@ tr, th {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: 40%;
+  width: 65%;
 }
 
 .header .flexbox .contenedorBrand .contenedorPug .pugImagen {
@@ -377,8 +377,8 @@ tr, th {
 .gridProductos {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (1fr)[4];
-      grid-template-columns: repeat(4, 1fr);
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
   gap: 2rem;
   width: 80%;
 }
@@ -423,6 +423,8 @@ tr, th {
 .gridProductos .producto .producto__informacion .producto__precio {
   color: #D62828;
   font-weight: 900;
+  margin-top: 1rem;
+  font-size: 2rem;
 }
 
 .gridProductos .producto .producto__boton {
