@@ -9,7 +9,7 @@ class Contenedor {
   }
 
   async save(item) {
-    let data = await getData(fs, this.file);
+    let data = await this.getAll();
     let quantityOfItems = data.length;
 
     if (quantityOfItems) {
@@ -31,7 +31,7 @@ class Contenedor {
   }
 
   async getById(id) {
-    let data = await getData(fs, this.file);
+    let data = await this.getAll();
 
     if (isInArray(id, data)) {
       const itemFound = data.find((item) => item.id === id);
@@ -46,7 +46,7 @@ class Contenedor {
   }
 
   async deleteById(id) {
-    let data = await getData(fs, this.file);
+    let data = await this.getAll();
 
     if (isInArray(id, data)) {
       const arrayFiltered = data.filter((item) => item.id !== id);
