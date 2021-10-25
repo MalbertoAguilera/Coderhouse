@@ -1,0 +1,50 @@
+[
+  {
+    "title": "Escuadra",
+    "price": 123.45,
+    "thumbnail": "https://cdn3.iconfinder.com/data...",
+    "id": 1
+  },
+  {
+    "title": "Calculadora",
+    "price": 234.56,
+    "thumbnail": "https://cdn3.iconfinder.com/data...",
+    "id": 2
+  },
+  {
+    "title": "Globo Terráqueo",
+    "price": 345.67,
+    "thumbnail": "https://cdn3.iconfinder.com/data...",
+    "id": 3
+  },
+  {
+    "title": "testObject",
+    "price": 100,
+    "thumbnail": "https://cdn3.iconfinder.com/data...",
+    "id": 4
+  },
+  {
+    "title": "testObject",
+    "price": 100,
+    "thumbnail": "https://cdn3.iconfinder.com/data...",
+    "id": 5
+  },
+  {
+    "title": "testObject",
+    "price": 100,
+    "thumbnail": "https://cdn3.iconfinder.com/data...",
+    "id": 6
+  },
+  {
+    "title": "testObject",
+    "price": 100,
+    "thumbnail": "https://cdn3.iconfinder.com/data...",
+    "id": 7
+  },
+  {
+    "title": "testObject",
+    "price": 100,
+    "thumbnail": "https://cdn3.iconfinder.com/data...",
+    "id": 8
+  }
+]
