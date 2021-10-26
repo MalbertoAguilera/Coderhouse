@@ -60,6 +60,23 @@ class Contenedor {
     await writeData(this.file, []);
     return;
   }
+
+  async editById(id, editedProperties){
+
+    let data = await this.getAll();
+    const index = data.findIndex(item => item.id === id);
+
+    if(index===-1)
+      return null
+
+    data[index] = {
+      ...data[index],
+      ...editedProperties
+    }
+
+    await writeData(this.file, data);
+    return data[index];
+  }
 }
 
 module.exports = Contenedor;

@@ -4,13 +4,13 @@ const router = new Router();
 const Contenedor = require("../class/Contenedor");
 const filePath = "./db/productos.txt";
 
+const contenedor = new Contenedor(filePath);
+
 router.get("/", async (req, res) => {
-  const contenedor = new Contenedor(filePath);
   res.json(await contenedor.getAll());
 });
 
 router.get("/:id", async (req, res) => {
-  const contenedor = new Contenedor(filePath);
   const idItem = parseInt(req.params.id);
 
   if ((await contenedor.getById(idItem)) === null)
@@ -19,14 +19,34 @@ router.get("/:id", async (req, res) => {
   res.json(await contenedor.getById(idItem));
 });
 
-router.post("/", (req, res) => {
-  const contenedor = new Contenedor(filePath);
-  const item = req.body;
-  res.send(contenedor.save(item));
+router.post("/", async (req, res) => {
+  const newItem = {
+    ...req.body,
+    price: parseFloat(req.body.price),
+    thumbnail: "https://picsum.photos/200"
+  };
+  newItem.id = await contenedor.save(newItem);
+  res.json(newItem);
+});
+
+router.put("/:id", async(req, res) => {
+  const idItem = parseInt(req.params.id);
+
+  const editedProperties = {
+    ...req.body,
+  };
+
+  const response = await contenedor.editById(idItem, editedProperties);
+
+  if (response === null)
+    return res.json({ error: "No se encontro el producto" });
+
+  res.send(response);
+  
+
 });
 
 router.delete("/:id", (req, res) => {
-  const contenedor = new Contenedor(filePath);
   const idItem = parseInt(req.params.id);
   contenedor.deleteById(idItem);
   res.json({ mensaje: `El item con el ID ${idItem} fue eliminado` });

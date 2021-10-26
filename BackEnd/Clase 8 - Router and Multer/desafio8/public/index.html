@@ -4,9 +4,26 @@
       <meta charset="UTF-8">
       <meta http-equiv="X-UA-Compatible" content="IE=edge">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <title>Document</title>
+      <title>Registro de Productos</title>
 </head>
 <body>
-      <h1>HOLA FORM</h1>
+      <div>
+            <h1>Registro de Nuevos Productos</h1>
+      </div>
+      <div>
+            <form action="/api/productos/" method="post">
+                  <div>
+                        <label for="title">Titulo</label>
+                        <input type="text" name="title">
+                  </div>
+                  <div>
+                        <label for="price">Precio</label>
+                        <input type="text" name="price">
+                  </div>
+                  <div>
+                        <input type="submit" value="Enviar">
+                  </div>
+            </form>
+      </div>
 </body>
 </html>
