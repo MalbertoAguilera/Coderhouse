@@ -1,0 +1,26 @@
+[
+  {
+    "title": "Escuadra",
+    "price": 256.15,
+    "thumbnail": "https://picsum.photos/200",
+    "id": 1
+  },
+  {
+    "title": "Calculadora",
+    "price": 234.56,
+    "thumbnail": "https://picsum.photos/200",
+    "id": 2
+  },
+  {
+    "title": "Globo Terráqueo",
+    "price": 345.67,
+    "thumbnail": "https://picsum.photos/200",
+    "id": 3
+  },
+  {
+    "title": "Lapicera Simball",
+    "price": 90.75,
+    "thumbnail": "https://picsum.photos/200",
+    "id": 4
+  }
+]
