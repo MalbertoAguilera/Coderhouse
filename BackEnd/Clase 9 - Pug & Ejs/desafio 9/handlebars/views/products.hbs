@@ -1,0 +1,17 @@
+{{> head }}
+{{> nav }}
+<div>
+    <h1> PRODUCTOS</h1>
+    <table class="ui celled table" style="text-align:center;" >
+       
+        <tbody>
+            {{#each data }}
+          <tr>
+            <td data-label="{{this.title }}">{{this.title }}</td>
+            <td data-label="{{this.price }}">${{this.price }}</td>
+            <td data-label="{{this.thumbnail }}"><img src="{{ this.thumbnail }}" alt="" border=3 height=50 width=50></img></td>
+          </tr>
+            {{/each }}
+        </tbody>
+      </table>
+</div>

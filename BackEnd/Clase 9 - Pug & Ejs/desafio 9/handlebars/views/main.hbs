@@ -1,0 +1,17 @@
+{{> head }}
+{{> nav }}
+<form style="padding: 10%;" class="ui form container" action="/productos" method="POST" >
+    <div class="field">
+      <label>Nombre del producto</label>
+      <input type="text" name="title" placeholder="Nombre del producto">
+    </div>
+    <div class="field">
+      <label>Precio</label>
+      <input type="text" name="price" placeholder="Precio">
+    </div>
+    <div class="field">
+        <label>image url</label>
+        <input type="text" name="thumbnail" placeholder="url imagen">
+      </div>
+    <button class="ui button" type="submit">Submit</button>
+  </form>

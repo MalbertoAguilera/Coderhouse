@@ -22,5 +22,17 @@
     "price": 90.75,
     "thumbnail": "https://picsum.photos/200",
     "id": 4
+  },
+  {
+    "title": "pegamento",
+    "price": 90,
+    "thumbnail": "https://picsum.photos/200",
+    "id": 5
+  },
+  {
+    "title": "resaltador",
+    "price": 150,
+    "thumbnail": "https://picsum.photos/200",
+    "id": 6
   }
 ]

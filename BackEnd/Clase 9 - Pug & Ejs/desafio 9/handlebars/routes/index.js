@@ -7,7 +7,7 @@ const filePath = "./db/productos.txt";
 const contenedor = new Contenedor(filePath);
 
 router.get("/", async (req, res) => {
-  res.json(await contenedor.getAll());
+  res.render("products",{data:await contenedor.getAll()})
 });
 
 router.get("/:id", async (req, res) => {
@@ -25,8 +25,8 @@ router.post("/", async (req, res) => {
     price: parseFloat(req.body.price),
     thumbnail: "https://picsum.photos/200"
   };
-  newItem.id = await contenedor.save(newItem);
-  res.json(newItem);
+  await contenedor.save(newItem);
+  res.redirect('/productos')
 });
 
 router.put("/:id", async(req, res) => {
