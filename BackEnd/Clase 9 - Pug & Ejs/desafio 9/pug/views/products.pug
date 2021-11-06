@@ -1,0 +1,11 @@
+include ./templates/head
+include ./templates/nav
+
+table.ui.celled.table
+  tbody
+    each pr in data
+        tr
+            td= pr.title
+            td= pr.price
+            td
+                img(src=pr.thumbnail alt='' border='3' height='50' width='50')
