@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<%- include("templates/head") %>
+<%- include("templates/nav") %>
+
+<body>
+    <h1> PRODUCTOS</h1>
+    <table class="ui celled table" style="text-align:center;" >
+        <tbody>
+            <% data.forEach(function(pr){ %>
+          <tr>
+            <td data-label="<%= pr.title  %>"><%= pr.title  %></td>
+            <td data-label="<%= pr.price %>"><%= pr.price %></td>
+            <td data-label="imagen"><img src="<%= pr.thumbnail %>" alt="" border=3 height=50 width=50></img></td>
+          </tr>
+            <% }) %>
+        </tbody>
+      </table>
+</body>
+</html>
