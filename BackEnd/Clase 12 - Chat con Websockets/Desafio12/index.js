@@ -7,8 +7,11 @@ const io = require("socket.io")(server);
 // FIN configuracion websocket
 const PORT = 3000 || process.env.PORT;
 const Contenedor = require("./class/Contenedor");
-const filePath = "./db/productos.txt";
-const handlerProducts = new Contenedor(filePath);
+const Message = require("./class/Message");
+const filePathProducts = "./db/productos.txt";
+const filePathMessages = "./db/messages.txt";
+const handlerProducts = new Contenedor(filePathProducts);
+const handlerMessages = new Message(filePathMessages);
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
@@ -21,17 +24,25 @@ app.use(express.static(__dirname + "/public"));
 io.on("connection", async (socket) => {
   console.log("Cliente conectado");
 
-  //titulo, data
-  socket.emit("message_client", await handlerProducts.getAll());
+  //Socket PRODUCTOS
+  socket.emit("server_sendProducts", await handlerProducts.getAll());
 
-  socket.on("message_back", (data) => {
-    console.log("Mensaje desde el clinte:", data);
+  socket.on("client_newProduct", async (item) => {
+    await handlerProducts.save(item);
+    io.emit("server_sendProducts", await handlerProducts.getAll());
   });
+  //FIN Socket PRODUCTOS
 
-  socket.on("message_client", async (data) => {
-    await handlerProducts.save(data);
-    socket.emit("message_client", await handlerProducts.getAll());
-  });
+  //Socket MENSAJES
+  socket.emit("server_sendMessages", await handlerMessages.getAllMessages());
+
+  socket.on("client_newMessage", async (objmessage) => {
+    
+    await handlerMessages.save(objmessage);
+    io.emit("server_sendMessages", await handlerMessages.getAllMessages());
+  })
+
+
 });
 
 server.listen(PORT, () => {

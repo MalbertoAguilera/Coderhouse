@@ -46,14 +46,16 @@
                   <div id="mensajes"></div>
                   <div id="chat">
                         <form onsubmit="return addInfo()" class="row g-1">
-                              <input type="text" placeholder="Nombre..." name="name" id="name"
+                              <input type="text" placeholder="Nombre..." name="user" id="user"
                                     class="form-control" />
-                              <input type="text" placeholder="Mensaje..." name="message" id="message"
+                              <input type="text" placeholder="Mensaje..." name="content" id="content"
                                     class="form-control" />
                               <input type="submit" value="Enviar" class="btn btn-primary" />
                         </form>
                   </div>
             </div>
+
+            <div id="boxMessages"></div>
 
       </div>
       <script src="/socket.io/socket.io.js"></script>

@@ -1,0 +1,26 @@
+[
+  {
+    "user": "Matias",
+    "content": "Hola",
+    "id": 1,
+    "date": "13/11/2021 12:59:33"
+  },
+  {
+    "user": "Leandro",
+    "content": "Como estas?",
+    "id": 2,
+    "date": "13/11/2021 13:02:41"
+  },
+  {
+    "user": "Matias",
+    "content": "Sufriendo con WebSockets, vos?",
+    "id": 3,
+    "date": "13/11/2021 13:02:41"
+  },
+  {
+    "user": "Leandro",
+    "content": "\t(-_-)",
+    "id": 4,
+    "date": "13/11/2021 13:16:20"
+  }
+]
