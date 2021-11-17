@@ -1,0 +1,14 @@
+[
+  {
+    "title": "Lapicera",
+    "price": "170.5",
+    "thumbnail": "https://picsum.photos/50",
+    "id": 1
+  },
+  {
+    "title": "Escuadra",
+    "price": "215.5",
+    "thumbnail": "https://picsum.photos/50",
+    "id": 2
+  }
+]
