@@ -1,14 +1,32 @@
 [
   {
-    "title": "Lapicera",
-    "price": "170.5",
-    "thumbnail": "https://picsum.photos/50",
-    "id": 1
+    "name": "Lapicera",
+    "description": "Lorem Ipsum",
+    "code": "13435",
+    "stock": "30",
+    "price": 170.5,
+    "thumbnail": "https://picsum.photos/200",
+    "id": 1,
+    "timeStamp": "17/11/2021 22:57:10"
   },
   {
-    "title": "Escuadra",
-    "price": "215.5",
-    "thumbnail": "https://picsum.photos/50",
-    "id": 2
+    "name": "Escuadra",
+    "description": "Lorem Ipsum",
+    "code": "999999",
+    "stock": "11",
+    "price": 76.5,
+    "thumbnail": "https://picsum.photos/200",
+    "id": 2,
+    "timeStamp": "17/11/2021 22:59:29"
+  },
+  {
+    "name": "Cuaderno A4",
+    "description": "Lorem Ipsum",
+    "code": "333",
+    "stock": "37",
+    "price": 100,
+    "thumbnail": "https://picsum.photos/200",
+    "id": 3,
+    "timeStamp": "17/11/2021 23:00:53"
   }
 ]

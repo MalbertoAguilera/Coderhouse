@@ -1,6 +1,8 @@
 const getData = require("../helpers/getData");
 const isInArray = require("../helpers/isInArray");
 const writeData = require("../helpers/writeData");
+const moment = require("moment");
+const now = moment().format("DD/MM/YYYY HH:mm:ss");
 
 class Contenedor {
   constructor(file) {
@@ -18,13 +20,13 @@ class Contenedor {
         id++;
       }
 
-      const newArray = [...data, { ...item, id: id }];
+      const newArray = [...data, { ...item, id: id, timeStamp:now }];
       //escribir archivo
       await writeData(this.file, newArray);
       return id;
     }
 
-    const newArray = [{ ...item, id: 1 }];
+    const newArray = [{ ...item, id: 1, timeStamp:now }];
     await writeData(this.file, newArray);
     return 1;
   }

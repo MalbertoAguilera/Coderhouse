@@ -9,7 +9,7 @@ class Cart {
     this.file = filePath;
   }
 
-  async createCart() {
+  async save(cart) {
       let data = await this.getAll();
       let quantityOfItems = data.length;
   
@@ -20,7 +20,7 @@ class Cart {
           id++;
         }
   
-        const arrCart = [...data, {id,timeStamp:now, products:[]}];
+        const arrCart = [...data, {id, timeStamp:now, ...cart}];
 
         console.log(arrCart);
         //escribir archivo
@@ -28,7 +28,7 @@ class Cart {
         return id;
       }
   
-      const newCart = [{id:1, timeStamp:now, products:[]}];
+      const newCart = [{id:1, timeStamp:now, products:[], ...cart}];
       console.log(newCart);
 
       await writeData(this.file, newCart);
@@ -37,6 +37,17 @@ class Cart {
 
     async getAll() {
       return await getData(this.file);
+    }
+
+    async getById(id) {
+      let data = await this.getAll();
+  
+      if (isInArray(id, data)) {
+        const itemFound = data.find((item) => item.id === id);
+        return itemFound;
+      }
+  
+      return null;
     }
 }
 

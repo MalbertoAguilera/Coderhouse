@@ -15,6 +15,13 @@ app.use("/static",express.static(__dirname + "/public"));
 app.use("/api/productos", routerProducts);
 app.use("/api/carrito", routerCart);
 
+app.use(function (req, res, next) {
+      res.status(404).json({
+        error: -2,
+        descripcion: `Ruta ${req.url}, metodo ${req.method} no implementada`
+      });
+    });
+
 const server = app.listen(PORT, () => {
       console.log(`El servidor se encuentra escuchando por el puerto ${server.address().port}`)
 });

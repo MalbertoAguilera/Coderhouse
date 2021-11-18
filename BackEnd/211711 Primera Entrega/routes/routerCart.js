@@ -6,29 +6,28 @@ const filePath = "./db/carts.txt";
 
 const handleCarts = new Cart(filePath);
 
+const admin = false;
+const msjError = {
+  error: -1,
+  mensaje: "usuario sin privilegios",
+};
+
 
 //Crea un carrito y devuelve su id
-routerCart.post("/", async (req, res) => {
-});
+routerCart.post("/", async (req, res) => {});
 
 //Vacía un carrito y lo elimina
-routerCart.delete("/:id", (req, res) => {
-  
-});
+routerCart.delete("/:id", (req, res) => {});
 
 //Me permite listar todos los productos guardados en el carrito
 routerCart.get("/", async (req, res) => {
-      await handleCarts.createCart();
+  await handleCarts.createCart();
 });
 
 //Para incorporar productos al carrito por su id de producto
-routerCart.post("/:id/productos", async(req, res) => {
-
-});
+routerCart.post("/:id/productos", async (req, res) => {});
 
 //Eliminar un producto del carrito por su id de carrito y de producto
-routerCart.delete("/:id/productos/:id_prod", async(req, res) => {
-
-});
+routerCart.delete("/:id/productos/:id_prod", async (req, res) => {});
 
 module.exports = routerCart;
