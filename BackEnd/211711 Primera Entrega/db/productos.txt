@@ -28,5 +28,45 @@
     "thumbnail": "https://picsum.photos/200",
     "id": 3,
     "timeStamp": "17/11/2021 23:00:53"
+  },
+  {
+    "name": "Transportador",
+    "description": "Lorem Ipsum",
+    "code": "453",
+    "stock": "78",
+    "price": 200,
+    "thumbnail": "https://picsum.photos/200",
+    "id": 4,
+    "timeStamp": "22/11/2021 21:28:12"
+  },
+  {
+    "name": "Separadores",
+    "description": "Lorem Ipsum",
+    "code": "9789",
+    "stock": "120",
+    "price": 35.5,
+    "thumbnail": "https://picsum.photos/200",
+    "id": 5,
+    "timeStamp": "22/11/2021 21:28:12"
+  },
+  {
+    "name": "Tijera",
+    "description": "Lorem Ipsum",
+    "code": "35211",
+    "stock": "85",
+    "price": 115.5,
+    "thumbnail": "https://picsum.photos/200",
+    "id": 6,
+    "timeStamp": "22/11/2021 21:28:12"
+  },
+  {
+    "name": "Corrector",
+    "description": "Lorem Ipsum",
+    "code": "66668",
+    "stock": "23",
+    "price": 205.5,
+    "thumbnail": "https://picsum.photos/200",
+    "id": 7,
+    "timeStamp": "22/11/2021 21:28:12"
   }
 ]

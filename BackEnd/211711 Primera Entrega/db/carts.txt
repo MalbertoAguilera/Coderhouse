@@ -2,16 +2,313 @@
   {
     "id": 1,
     "timeStamp": "13/11/2021 18:32:42",
-    "products": []
+    "products": [
+      {
+        "name": "Lapicera",
+        "description": "Lorem Ipsum",
+        "code": "13435",
+        "stock": "30",
+        "price": 170.5,
+        "thumbnail": "https://picsum.photos/200",
+        "id": 1,
+        "timeStamp": "17/11/2021 22:57:10"
+      },
+      {
+        "name": "Escuadra",
+        "description": "Lorem Ipsum",
+        "code": "999999",
+        "stock": "11",
+        "price": 76.5,
+        "thumbnail": "https://picsum.photos/200",
+        "id": 2,
+        "timeStamp": "17/11/2021 22:59:29"
+      },
+      {
+        "name": "Transportador",
+        "description": "Lorem Ipsum",
+        "code": "453",
+        "stock": "78",
+        "price": 200,
+        "thumbnail": "https://picsum.photos/200",
+        "id": 4,
+        "timeStamp": "22/11/2021 21:28:12"
+      },
+      {
+        "name": "Separadores",
+        "description": "Lorem Ipsum",
+        "code": "9789",
+        "stock": "120",
+        "price": 35.5,
+        "thumbnail": "https://picsum.photos/200",
+        "id": 5,
+        "timeStamp": "22/11/2021 21:28:12"
+      },
+      {
+        "name": "Tijera",
+        "description": "Lorem Ipsum",
+        "code": "35211",
+        "stock": "85",
+        "price": 115.5,
+        "thumbnail": "https://picsum.photos/200",
+        "id": 6,
+        "timeStamp": "22/11/2021 21:28:12"
+      },
+      {
+        "name": "Corrector",
+        "description": "Lorem Ipsum",
+        "code": "66668",
+        "stock": "23",
+        "price": 205.5,
+        "thumbnail": "https://picsum.photos/200",
+        "id": 7,
+        "timeStamp": "22/11/2021 21:28:12"
+      }
+    ]
   },
   {
     "id": 2,
     "timeStamp": "13/11/2021 18:32:42",
-    "products": []
+    "products": [
+      {
+        "name": "Escuadra",
+        "description": "Lorem Ipsum",
+        "code": "999999",
+        "stock": "11",
+        "price": 76.5,
+        "thumbnail": "https://picsum.photos/200",
+        "id": 2,
+        "timeStamp": "17/11/2021 22:59:29"
+      },
+      {
+        "name": "Cuaderno A4",
+        "description": "Lorem Ipsum",
+        "code": "333",
+        "stock": "37",
+        "price": 100,
+        "thumbnail": "https://picsum.photos/200",
+        "id": 3,
+        "timeStamp": "17/11/2021 23:00:53"
+      },
+      {
+        "name": "Transportador",
+        "description": "Lorem Ipsum",
+        "code": "453",
+        "stock": "78",
+        "price": 200,
+        "thumbnail": "https://picsum.photos/200",
+        "id": 4,
+        "timeStamp": "22/11/2021 21:28:12"
+      },
+      {
+        "name": "Separadores",
+        "description": "Lorem Ipsum",
+        "code": "9789",
+        "stock": "120",
+        "price": 35.5,
+        "thumbnail": "https://picsum.photos/200",
+        "id": 5,
+        "timeStamp": "22/11/2021 21:28:12"
+      },
+      {
+        "name": "Tijera",
+        "description": "Lorem Ipsum",
+        "code": "35211",
+        "stock": "85",
+        "price": 115.5,
+        "thumbnail": "https://picsum.photos/200",
+        "id": 6,
+        "timeStamp": "22/11/2021 21:28:12"
+      },
+      {
+        "name": "Corrector",
+        "description": "Lorem Ipsum",
+        "code": "66668",
+        "stock": "23",
+        "price": 205.5,
+        "thumbnail": "https://picsum.photos/200",
+        "id": 7,
+        "timeStamp": "22/11/2021 21:28:12"
+      }
+    ]
   },
   {
-    "id": 3,
-    "timeStamp": "13/11/2021 18:32:42",
-    "products": []
+    "id": 4,
+    "timeStamp": "22/11/2021 17:04:57",
+    "products": [
+      {
+        "name": "Cuaderno A4",
+        "description": "Lorem Ipsum",
+        "code": "333",
+        "stock": "37",
+        "price": 100,
+        "thumbnail": "https://picsum.photos/200",
+        "id": 3,
+        "timeStamp": "17/11/2021 23:00:53"
+      },
+      {
+        "name": "Transportador",
+        "description": "Lorem Ipsum",
+        "code": "453",
+        "stock": "78",
+        "price": 200,
+        "thumbnail": "https://picsum.photos/200",
+        "id": 4,
+        "timeStamp": "22/11/2021 21:28:12"
+      },
+      {
+        "name": "Separadores",
+        "description": "Lorem Ipsum",
+        "code": "9789",
+        "stock": "120",
+        "price": 35.5,
+        "thumbnail": "https://picsum.photos/200",
+        "id": 5,
+        "timeStamp": "22/11/2021 21:28:12"
+      },
+      {
+        "name": "Tijera",
+        "description": "Lorem Ipsum",
+        "code": "35211",
+        "stock": "85",
+        "price": 115.5,
+        "thumbnail": "https://picsum.photos/200",
+        "id": 6,
+        "timeStamp": "22/11/2021 21:28:12"
+      },
+      {
+        "name": "Corrector",
+        "description": "Lorem Ipsum",
+        "code": "66668",
+        "stock": "23",
+        "price": 205.5,
+        "thumbnail": "https://picsum.photos/200",
+        "id": 7,
+        "timeStamp": "22/11/2021 21:28:12"
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "timeStamp": "22/11/2021 17:08:31",
+    "products": [
+      {
+        "name": "Transportador",
+        "description": "Lorem Ipsum",
+        "code": "453",
+        "stock": "78",
+        "price": 200,
+        "thumbnail": "https://picsum.photos/200",
+        "id": 4,
+        "timeStamp": "22/11/2021 21:28:12"
+      },
+      {
+        "name": "Separadores",
+        "description": "Lorem Ipsum",
+        "code": "9789",
+        "stock": "120",
+        "price": 35.5,
+        "thumbnail": "https://picsum.photos/200",
+        "id": 5,
+        "timeStamp": "22/11/2021 21:28:12"
+      },
+      {
+        "name": "Tijera",
+        "description": "Lorem Ipsum",
+        "code": "35211",
+        "stock": "85",
+        "price": 115.5,
+        "thumbnail": "https://picsum.photos/200",
+        "id": 6,
+        "timeStamp": "22/11/2021 21:28:12"
+      },
+      {
+        "name": "Corrector",
+        "description": "Lorem Ipsum",
+        "code": "66668",
+        "stock": "23",
+        "price": 205.5,
+        "thumbnail": "https://picsum.photos/200",
+        "id": 7,
+        "timeStamp": "22/11/2021 21:28:12"
+      }
+    ]
+  },
+  {
+    "id": 7,
+    "timeStamp": "22/11/2021 17:09:05",
+    "products": [
+      {
+        "name": "Separadores",
+        "description": "Lorem Ipsum",
+        "code": "9789",
+        "stock": "120",
+        "price": 35.5,
+        "thumbnail": "https://picsum.photos/200",
+        "id": 5,
+        "timeStamp": "22/11/2021 21:28:12"
+      },
+      {
+        "name": "Tijera",
+        "description": "Lorem Ipsum",
+        "code": "35211",
+        "stock": "85",
+        "price": 115.5,
+        "thumbnail": "https://picsum.photos/200",
+        "id": 6,
+        "timeStamp": "22/11/2021 21:28:12"
+      },
+      {
+        "name": "Corrector",
+        "description": "Lorem Ipsum",
+        "code": "66668",
+        "stock": "23",
+        "price": 205.5,
+        "thumbnail": "https://picsum.photos/200",
+        "id": 7,
+        "timeStamp": "22/11/2021 21:28:12"
+      }
+    ]
+  },
+  {
+    "id": 8,
+    "timeStamp": "22/11/2021 17:09:52",
+    "products": [
+      {
+        "name": "Tijera",
+        "description": "Lorem Ipsum",
+        "code": "35211",
+        "stock": "85",
+        "price": 115.5,
+        "thumbnail": "https://picsum.photos/200",
+        "id": 6,
+        "timeStamp": "22/11/2021 21:28:12"
+      },
+      {
+        "name": "Corrector",
+        "description": "Lorem Ipsum",
+        "code": "66668",
+        "stock": "23",
+        "price": 205.5,
+        "thumbnail": "https://picsum.photos/200",
+        "id": 7,
+        "timeStamp": "22/11/2021 21:28:12"
+      }
+    ]
+  },
+  {
+    "id": 9,
+    "timeStamp": "22/11/2021 21:28:12",
+    "products": [
+      {
+        "name": "Corrector",
+        "description": "Lorem Ipsum",
+        "code": "66668",
+        "stock": "23",
+        "price": 205.5,
+        "thumbnail": "https://picsum.photos/200",
+        "id": 7,
+        "timeStamp": "22/11/2021 21:28:12"
+      }
+    ]
   }
 ]

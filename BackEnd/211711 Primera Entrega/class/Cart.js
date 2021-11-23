@@ -9,46 +9,98 @@ class Cart {
     this.file = filePath;
   }
 
-  async save(cart) {
-      let data = await this.getAll();
-      let quantityOfItems = data.length;
-  
-      if (quantityOfItems) {
-        let id = data[quantityOfItems - 1].id + 1;
-  
-        while (isInArray(id, data)) {
-          id++;
-        }
-  
-        const arrCart = [...data, {id, timeStamp:now, ...cart}];
+  async create() {
+    let data = await this.getAll();
+    let quantityOfItems = data.length;
 
-        console.log(arrCart);
-        //escribir archivo
-        await writeData(this.file, arrCart);
-        return id;
+    if (quantityOfItems) {
+      let id = data[quantityOfItems - 1].id + 1;
+
+      while (isInArray(id, data)) {
+        id++;
       }
-  
-      const newCart = [{id:1, timeStamp:now, products:[], ...cart}];
-      console.log(newCart);
 
-      await writeData(this.file, newCart);
-      return 1;
+      const updatedArrCarts = [...data, { id, timeStamp: now, products: [] }];
+
+      console.log(updatedArrCarts);
+      //escribir archivo
+      await writeData(this.file, updatedArrCarts);
+      return id;
     }
 
-    async getAll() {
-      return await getData(this.file);
+    const newCart = [{ id: 1, timeStamp: now, products: [] }];
+    console.log(newCart);
+
+    await writeData(this.file, newCart);
+    return 1;
+  }
+
+  async getAll() {
+    return await getData(this.file);
+  }
+
+  async getById(id) {
+    let data = await this.getAll();
+
+    if (isInArray(id, data)) {
+      const itemFound = data.find((item) => item.id === id);
+      return itemFound.products;
     }
 
-    async getById(id) {
-      let data = await this.getAll();
-  
-      if (isInArray(id, data)) {
-        const itemFound = data.find((item) => item.id === id);
-        return itemFound;
-      }
-  
+    return null;
+  }
+
+  async deleteById(id) {
+    let data = await this.getAll();
+
+    if (isInArray(id, data)) {
+      const arrayFiltered = data.filter((item) => item.id !== id);
+      await writeData(this.file, arrayFiltered);
+      console.log(`El carrito con el ID: ${id}, FUE ELIMINADO CON EXITO`);
+      return id;
+    }
+
+    console.log(`El item con el ID: ${id}, NO EXISTE EN LA COLECCION!`);
+    return null;
+  }
+
+  async addProducts(id, arrProducts) {
+    let data = await this.getAll();
+
+    if (!isInArray(id, data)) {
       return null;
     }
+
+    let index = data.findIndex((cart) => cart.id === id);
+
+    data[index].products = [
+        ...data[index].products,
+        ...arrProducts
+    ]
+
+    await writeData(this.file, data);
+    return data[index].id;
+  }
+
+  async deleteProduct(idCart, idProduct){
+    const data = await this.getAll();
+
+    if (!isInArray(idCart, data)) {
+      return null;
+    }
+
+    let indexCart = data.findIndex((cart) => cart.id === idCart);
+
+    const arrProductsModified = data[indexCart].products.filter(item => item.id !== idProduct);
+
+    console.log(arrProductsModified);
+
+    data[indexCart] = {...data[indexCart], products : arrProductsModified};
+
+    await writeData(this.file, data);
+    return data[indexCart].id;
+
+  }
 }
 
 module.exports = Cart;

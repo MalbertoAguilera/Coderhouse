@@ -50,13 +50,13 @@ routerProducts.put("/:id", async (req, res) => {
   res.json(editedItem);
 });
 
-routerProducts.delete("/:id", (req, res) => {
+routerProducts.delete("/:id", async (req, res) => {
   if(req.query.admin === "false"){
     res.status(404).json({error: -1, descripcion: `Ruta ${req.originalUrl}, metodo ${req.method} NO AUTORIZADO`});
     return;
   }
   const idItem = parseInt(req.params.id);
-  contenedor.deleteById(idItem);
+  await contenedor.deleteById(idItem);
   res.json({ mensaje: `El item con el ID ${idItem} fue eliminado`});
 });
 
